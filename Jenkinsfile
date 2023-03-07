@@ -12,7 +12,7 @@ pipeline {
         stage('Build') {
             agent {
                 docker {
-                    image 'hello-word'
+                    image 'hello-word:latest'
 
                 }
             }
