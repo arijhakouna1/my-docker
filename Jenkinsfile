@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+     agent {
+                    dockerfile true
+            }
     stages {
         
       /*   stage('docker-credential') {
@@ -10,9 +12,7 @@ pipeline {
         }*/
         
         stage('Build') {
-            agent {
-                    dockerfile true
-            }
+           
         
         
             steps {
