@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
         
-      */*   stage('docker-credential') {
+      /*   stage('docker-credential') {
             steps {
             
                 sh 'docker login -u arijhakouna -p arij12345'  
