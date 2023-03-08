@@ -2,17 +2,17 @@ pipeline {
     agent any
     stages {
         
-         stage('docker-credential') {
+      */*   stage('docker-credential') {
             steps {
             
                 sh 'docker login -u arijhakouna -p arij12345'  
             }
-        }
+        }*/
         
         stage('Build') {
             agent {
                 docker {
-                    image 'hello-world:latest'
+                    dockerfile true
 
                 }
             }
